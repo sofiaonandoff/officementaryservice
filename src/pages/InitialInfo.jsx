@@ -923,7 +923,7 @@ const InitialInfo = () => {
             (step === 2 && (!formData.seatingType || formData.workStyle.length === 0 || !formData.workStyleFlexibility))
           }
         >
-          {step === 3 ? '설계 시작하기' : '다음'}
+          {step === 3 ? '댜음' : '다음'}
         </button>
       </div>
     </div>

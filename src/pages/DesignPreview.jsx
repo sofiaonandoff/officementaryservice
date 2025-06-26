@@ -276,24 +276,14 @@ const DesignPreview = () => {
               ))}
             </div>
           </div>
-          <div className="data-actions">
-            <button className="back-button" onClick={handleGoBack}>
-              이전으로 돌아가기
-            </button>
-            <button className="submit-button" onClick={handleSubmitData}>
-              데이터 제출하기
-            </button>
-            <button className="export-button" onClick={handleExportData}>
-              데이터 내보내기 (CSV)
-            </button>
-          </div>
         </div>
-        <div className="preview-section">
-          <h2>AI 설계 진행 중...</h2>
-          <div className="loading-animation">
-            <div className="loading-spinner"></div>
-            <p>최적의 오피스 레이아웃을 설계하고 있습니다.</p>
-          </div>
+        <div className="data-actions">
+          <button className="back-button" onClick={handleGoBack}>
+            이전으로 돌아가기
+          </button>
+          <button className="submit-button" onClick={handleSubmitData}>
+            상담정보 제출하기
+          </button>
         </div>
       </div>
     </div>
