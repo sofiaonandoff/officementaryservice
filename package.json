@@ -1,9 +1,9 @@
 {
-  "name": "officemm",
+  "name": "officementaryservice",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sofiaonandoff.github.io/OFFICEmm/",
+  "homepage": "https://sofiaonandoff.github.io/officementaryservice",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
