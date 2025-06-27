@@ -1,16 +1,27 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import InitialInfo from './pages/InitialInfo';
-/*import WorkspaceInfo from './pages/WorkspaceInfo';
-import MeetingRoomInfo from './pages/MeetingRoomInfo';
-import AdditionalSpaceInfo from './pages/AdditionalSpaceInfo';
-*/
 import DesignPreview from './pages/DesignPreview';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get('redirect');
+    if (redirect) {
+      navigate(redirect, { replace: true });
+    }
+  }, [navigate]);
+  return null;
+}
 
 function App() {
   return (
     <Router basename="/officementaryservice">
       <div className="App">
+        <RedirectHandler />
         <header className="app-header">
           <div className="header-content">
             <div className="logo">
@@ -30,24 +41,4 @@ function App() {
     </Router>
   );
 }
-/*
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Routes>
-                    <Route path="/" element={<InitialInfo />} />
-
-          <Route path="/" element={<Navigate to="/initial-info" replace />} />
-          <Route path="/initial-info" element={<InitialInfo />} />
-          <Route path="/workspace-info" element={<WorkspaceInfo />} />
-          <Route path="/meetingroom-info" element={<MeetingRoomInfo />} />
-          <Route path="/additional-space-info" element={<AdditionalSpaceInfo />} />
-          <Route path="/design-preview" element={<DesignPreview />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
-*/
 export default App;
